@@ -8,7 +8,7 @@ class ListManager {
         listOfTasks.add(newItem)
     }
     //marks a task as complete based on its ID.
-    fun markItemAsComplete!!!!!(id: Int) {
+    fun markItemAsComplete(id: Int) {
         val itemCompleted = listOfTasks.find { it.itemID == id }
         itemCompleted?.isComplete = true
     }

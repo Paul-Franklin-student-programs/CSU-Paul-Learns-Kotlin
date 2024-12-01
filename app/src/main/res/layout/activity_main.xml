@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
+
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -40,10 +40,9 @@
         android:text="Task List"
         android:padding="16dp"
         android:textSize="16sp"/>
-=======
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
->>>>>>> 57b2bb7 (solved gradle issues so MainActivity and AndroidManifest can function properly)
 
 </LinearLayout>
