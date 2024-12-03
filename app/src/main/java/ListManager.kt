@@ -18,7 +18,7 @@ class ListManager {
             "No tasks yet!"
         } else {
             listOfTasks.joinToString(separator = "\n") { item ->
-                "ID: ${item.itemID}, Task: ${item.taskDescription}, Completed: ${item.isComplete}"
+                "ID: ${item.itemID}, Task: ${item.taskDescription},\nCompleted: ${item.isComplete}\n"
             }
         }
     }
