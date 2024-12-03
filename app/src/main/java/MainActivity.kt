@@ -26,18 +26,20 @@ class MainActivity : AppCompatActivity() {  // Extend AppCompatActivity
             if (taskName.isNotEmpty()) {
                 myManager.addItem(taskName)
                 spaceForTaskList.text = myManager.showAllTasks().toString()
-            }
+            } else{ val message = "ERROR: Text Field is Empty\n\n" + myManager.showAllTasks()
+                spaceForTaskList.text = message
         }
 
         markTaskDoneButton.setOnClickListener {
-            val finishedTaskID = textFieldForID.text.toString().toInt()
-            if (finishedTaskID.toString().isNotEmpty() && finishedTaskID.toString()
-                    .toIntOrNull() != null
-            ) {
+            val finishedTaskID = textFieldForID.text.toString().toIntOrNull()
+            if (finishedTaskID != null) {
                 myManager.markItemAsComplete(finishedTaskID)
                 spaceForTaskList.setText(myManager.showAllTasks().toString())
+            } else {
+                val message2 = "ERROR: Text Field Requires Number\n\n" + myManager.showAllTasks()
+                spaceForTaskList.text = message2
             }
-
+        }
         }
     }
 }
