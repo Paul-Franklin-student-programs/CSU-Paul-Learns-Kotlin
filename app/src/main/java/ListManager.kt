@@ -13,8 +13,14 @@ class ListManager {
         itemCompleted?.isComplete = true
     }
     //displays all tasks and their properties in the console
-    fun showAllTasks() {
-        listOfTasks.forEach { println(it) }
+    fun showAllTasks(): String {
+        return if (listOfTasks.isEmpty()) {
+            "No tasks yet!"
+        } else {
+            listOfTasks.joinToString(separator = "\n") { item ->
+                "ID: ${item.itemID}, Task: ${item.taskDescription}, Completed: ${item.isComplete}"
+            }
+        }
     }
 }
 //instances of this class constitute to-do task objects utilized by ListManager and main()

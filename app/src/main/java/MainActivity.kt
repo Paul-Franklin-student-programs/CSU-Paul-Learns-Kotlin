@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {  // Extend AppCompatActivity
             val taskName = textFieldForTasks.text.toString()
             if (taskName.isNotEmpty()) {
                 myManager.addItem(taskName)
-                spaceForTaskList.setText(myManager.showAllTasks().toString())
+                spaceForTaskList.text = myManager.showAllTasks().toString()
             }
         }
 
